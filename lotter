@@ -1,0 +1,21 @@
+#!/usr/bin/swift sh
+import Foundation
+
+typealias 候选人 = String
+
+extension Array where Element == 候选人 {
+  var 天选之人:候选人 {
+    return self.randomElement()!
+  }
+  func 打印名单() {
+    print("********************")
+    print("📒候选人名单:")
+    self.map{print("🎁:"+$0)}
+    print("********************") 
+  }
+}
+
+let 候选名单 = ["宫伟","张思琦","宋旭陶"]
+
+候选名单.打印名单()
+print("天选之人:🏆[" + 候选名单.天选之人 + "]🏆")
